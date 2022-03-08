@@ -1,18 +1,21 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import { getJobs, getProjects } from '../actions'
+import { getJobs, getProjects, getPublications } from '../actions'
 import Hero from '../components/hero'
 import Jobs from '../components/jobs'
 import Layout from '../components/layout'
 import Projects from '../components/project'
+import Publications from '../components/publication'
 
-export default function Home({jobs, projects}) {
+export default function Home({jobs, projects, publications}) {
   const featuredProjects = projects.data.filter(project => project.attributes.featured)
+  const featuredPublications = publications.data.filter(publication => publication.attributes.featured)
   return (
     <>
       <Hero />
       <Jobs jobs={jobs.data} />
       <Projects projects={featuredProjects} title="Featured projects" showLink />
+      <Publications publications={featuredPublications} title="Latest publications" showLink />
     </>
   )
 }
@@ -20,7 +23,8 @@ export default function Home({jobs, projects}) {
 Home.getInitialProps = async () => {
   const jobs = await getJobs()
   const projects = await getProjects()
-  return { jobs, projects }
+  const publications = await getPublications()
+  return { jobs, projects, publications }
 }
 
 Home.Layout = Layout

@@ -9,3 +9,7 @@ export const getJobs = () => {
 export const getProjects = () => {
   return axios.get(`${BASE_URL}/projects?populate=*`).then(res => res.data);
 }
+
+export const getPublications = () => {
+  return axios.get(`${BASE_URL}/blogs?populate=*`).then(res => res.data);
+}

@@ -1,12 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 
-import { FaGithubSquare, FaShareSquare } from "react-icons/fa"
+import { AiOutlineGlobal, AiOutlineGithub } from "react-icons/ai"
+import getImageUrl from "../../utils"
 
 const ProjectCard = ({ description, title, github, stack, url, image, index }) => {
 
-  const API_URL = "https://api.uduakessien.com"
-  const imageObj = {...image.data.attributes.formats.medium}
-
+  const imageUrl = getImageUrl(image)
 
   return (
     <article className="project">
@@ -14,7 +13,7 @@ const ProjectCard = ({ description, title, github, stack, url, image, index }) =
     <div className="project-img gatsby-image-wrapper" style={{position:"relative", overflow:"hidden"}}>
       <div aria-hidden="true" style={{width:"100%", paddingBottom: "59%"}} />
       <img aria-hidden="true" 
-        src={`${API_URL}${imageObj.url}`}
+        src={imageUrl}
         alt={title} 
         style={{position: "absolute", top: "0", left: "0", width: "100%", height: "100%", objectFit: "cover", objectPosition: "center center", opacity: "1", transitionDelay: "500ms"}} />
           
@@ -30,11 +29,11 @@ const ProjectCard = ({ description, title, github, stack, url, image, index }) =
           })}
         </div>
         <div className="project-links">
-          <a href={github} target="_blank" rel="noopener noreferrer">
-            <FaGithubSquare className="project-icon" />
+          <a href={github} title="Github" target="_blank" rel="noopener noreferrer">
+            <AiOutlineGithub className="project-icon" />
           </a>
-          <a href={url} target="_blank" rel="noopener noreferrer">
-            <FaShareSquare className="project-icon" />
+          <a href={url} title="Live Link" target="_blank" rel="noopener noreferrer">
+            <AiOutlineGlobal className="project-icon" />
           </a>
         </div>
       </div>
