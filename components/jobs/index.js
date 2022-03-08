@@ -19,7 +19,7 @@ const Jobs = ({jobs}) => {
           <div className="btn-container">
             {jobs.map((item, index) => {
               return (
-              <button key={`job-${item.attributes.id}`} 
+              <button key={`job-${Math.random().toString().slice(2,4)}${item.attributes.id}`} 
               onClick={() => setValue(index)}
               className={`job-btn ${index === value && 'active-btn'}`}>{item.attributes.company}
               </button>
