@@ -13,3 +13,7 @@ export const getProjects = () => {
 export const getPublications = () => {
   return axios.get(`${BASE_URL}/blogs?populate=*`).then(res => res.data);
 }
+
+export const getAbout = () => {
+  return axios.get(`${BASE_URL}/about?populate=*`).then(res => res.data);
+}
