@@ -1,5 +1,5 @@
 import { getProjects } from '../actions';
-import Layout from '../components/layout';
+import BaseLayout from '../components/layout';
 import SEO from '../components/seo';
 import { useEffect, useState } from 'react';
 import ProjectCard from '../components/project/projectCard';
@@ -15,7 +15,7 @@ const ProjectsPage = ({projects}) => {
   useEffect(() => {
     const count = Math.ceil(projects.data.length/pageLimit);
     setPageCount(count)
-  }, [])
+  }, []);
 
   const projectsPerPage = projects.data
   .sort((a, b) => (new Date(b.attributes.date) - new Date(a.attributes.date)))
@@ -73,6 +73,6 @@ ProjectsPage.getInitialProps = async () => {
   return { projects }
 }
 
-ProjectsPage.Layout = Layout;
+ProjectsPage.Layout = BaseLayout;
 
 export default ProjectsPage;

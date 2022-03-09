@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { getJobs, getProjects, getPublications } from '../actions'
 import Hero from '../components/hero'
 import Jobs from '../components/jobs'
-import Layout from '../components/layout'
+import BaseLayout from '../components/layout'
 import Projects from '../components/project'
 import Publications from '../components/publication'
 import SEO from '../components/seo';
@@ -29,4 +29,4 @@ Home.getInitialProps = async () => {
   return { jobs, projects, publications }
 }
 
-Home.Layout = Layout
+Home.Layout = BaseLayout

@@ -6,7 +6,7 @@ import Navbar from "../navbar";
 import Sidebar from "../sidebar";
 
 
-const Layout = ({ children }) => {
+const BaseLayout = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -23,4 +23,4 @@ const Layout = ({ children }) => {
   )
 }
 
-export default Layout
+export default BaseLayout;

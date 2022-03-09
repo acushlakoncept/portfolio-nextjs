@@ -2,7 +2,7 @@
 import { getAbout } from "../actions";
 import Title from "../components/title";
 import getImageUrl from "../utils";
-import Layout from '../components/layout';
+import BaseLayout from '../components/layout';
 import SEO from '../components/seo';
 
 
@@ -38,6 +38,6 @@ About.getInitialProps = async () => {
   return { about }
 }
 
-About.Layout = Layout;
+About.Layout = BaseLayout;
 
 export default About;

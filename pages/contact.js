@@ -1,4 +1,4 @@
-import Layout from '../components/Layout'
+import BaseLayout from '../components/Layout'
 import SEO from '../components/seo';
 import { useState } from 'react';
 
@@ -43,6 +43,6 @@ const Contact = () => {
 }
 
 
-Contact.Layout = Layout;
+Contact.Layout = BaseLayout;
 
 export default Contact;

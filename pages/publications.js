@@ -1,7 +1,7 @@
 import { getPublications } from '../actions';
 import Publications from '../components/publication';
 import SEO from '../components/seo';
-import Layout from '../components/layout';
+import BaseLayout from '../components/layout';
 
 const PublicationPage = ({publications}) => {
   return (
@@ -19,6 +19,6 @@ PublicationPage.getInitialProps = async () => {
   return { publications }
 }
 
-PublicationPage.Layout = Layout;
+PublicationPage.Layout = BaseLayout;
 
 export default PublicationPage;
