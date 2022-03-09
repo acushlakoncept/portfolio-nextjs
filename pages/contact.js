@@ -1,4 +1,4 @@
-import BaseLayout from '../components/Layout'
+import BaseLayout from '../components/layout';
 import SEO from '../components/seo';
 import { useState } from 'react';
 
