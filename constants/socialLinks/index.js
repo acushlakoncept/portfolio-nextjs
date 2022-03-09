@@ -30,7 +30,7 @@ const data = [
   {
     id: 5,
     icon: <FaFile className="social-icon"></FaFile>,
-    url: "https://docs.google.com/document/d/1uvF70p3wZKJf7EUSRmtKh2CHu6SfH2yuLsQTO2hcbUg/edit?usp=sharing",
+    url: "https://drive.google.com/file/d/1kfunvQDEGA_R3011I9dwDSaTH43D8GRb/view",
   },
 ]
 
