@@ -3,6 +3,8 @@ import { getAbout } from "../actions";
 import Title from "../components/title";
 import getImageUrl from "../utils";
 import Layout from '../components/layout';
+import SEO from '../components/seo';
+
 
 
 const About = ({about}) => {
@@ -11,6 +13,8 @@ const About = ({about}) => {
   const imageUrl = getImageUrl(image)
 
   return (
+    <>
+    <SEO title="About" />
     <section className="about-page">
       <div className="section-center about-center">
         <img src={imageUrl} alt="about" className="about-img" />
@@ -25,6 +29,7 @@ const About = ({about}) => {
         </article>
       </div>
     </section>
+    </>
   )
 }
 

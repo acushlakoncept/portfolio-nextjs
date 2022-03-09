@@ -6,12 +6,14 @@ import Jobs from '../components/jobs'
 import Layout from '../components/layout'
 import Projects from '../components/project'
 import Publications from '../components/publication'
+import SEO from '../components/seo';
 
 export default function Home({jobs, projects, publications}) {
   const featuredProjects = projects.data.filter(project => project.attributes.featured)
   const featuredPublications = publications.data.filter(publication => publication.attributes.featured)
   return (
     <>
+      <SEO title="Home" />
       <Hero />
       <Jobs jobs={jobs.data} />
       <Projects projects={featuredProjects} title="Featured projects" showLink />

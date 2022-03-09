@@ -15,7 +15,7 @@ const SEO = ({title, description}) => {
 
   return (
     <Head>
-      <title>{`${title} || ${title}`}</title>
+      <title>{`${siteTitle} || ${title}`}</title>
       <meta name="description" content={`${description} || ${siteDesc}`} />
       <meta name="image" content={siteMetadata.image} />
 

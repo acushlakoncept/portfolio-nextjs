@@ -3,7 +3,6 @@ import Title from '../title'
 import ProjectCard from './projectCard'
 
 const Projects = ({projects, title, showLink}) => {
-
   
   return (
     <section className="section projects">
