@@ -7,7 +7,7 @@ export const getJobs = () => {
 }
 
 export const getProjects = () => {
-  return axios.get(`${BASE_URL}/projects?sort[0]=date%3Adesc&populate=*`).then(res => res.data);
+  return axios.get(`${BASE_URL}/projects?pagination[start]=0&pagination[limit]=30&sort[0]=date%3Adesc&populate=*`).then(res => res.data);
 }
 
 export const getPublications = () => {
